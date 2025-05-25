@@ -16,7 +16,6 @@ app = FastAPI()
 user_memory = {}
 PLUGINS_DIR = "./plugins"
 
-# Initialize vector DB and text splitter
 embedding = FakeEmbeddings(size=1536)
 vector_db = Chroma(collection_name="limitless_ai", embedding_function=embedding)
 splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=50)
